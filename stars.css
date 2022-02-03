@@ -51,4 +51,5 @@ a {
   flex-wrap: wrap;
   justify-content: start;
   width: 80%;
+  text-align: center;
 }

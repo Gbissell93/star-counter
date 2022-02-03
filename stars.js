@@ -1,6 +1,4 @@
 const countDisplay = document.querySelector("#count");
-const rmvBtn = document.querySelector("#rmv-btn");
-const addBtn = document.querySelector("#add-btn");
 const control = document.querySelector(".control");
 const stars = document.querySelector("#stars");
 
@@ -17,6 +15,9 @@ const increment = (e) => {
   stars.innerHTML = "";
   e.target.id === "add-btn" ? ++count : --count;
   countDisplay.innerHTML = count;
+  if (count < 0) {
+    stars.innerHTML = "<h2>Must Be Greater Than Zero!</h2>";
+  }
   for (let i = 0; i < count; i++) {
     makeStar();
   }
